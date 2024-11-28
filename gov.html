@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven Government Services Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="gov.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">GovTech AI</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#" id="loginBtn">Login</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>AI-Powered Government Services</h1>
+            <p>Streamline your access to government schemes with our intelligent platform</p>
+            <button class="btn btn-primary" id="getStartedBtn">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title" data-aos="fade-up">Our Features</h2>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="feature-icon document-icon"></i>
+                <h3>Document Verification</h3>
+                <p>AI-powered verification system for instant document authentication</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="feature-icon scheme-icon"></i>
+                <h3>Scheme Discovery</h3>
+                <p>Personalized recommendations for government schemes based on your profile</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="feature-icon assistant-icon"></i>
+                <h3>Smart Assistant</h3>
+                <p>24/7 AI chatbot support for all your queries</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content" data-aos="fade-up">
+            <h2 class="section-title">About Us</h2>
+            <p>We're dedicated to making government services accessible to everyone through cutting-edge AI technology.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>1M+</h3>
+                    <p>Users Served</p>
+                </div>
+                <div class="stat-card">
+                    <h3>500+</h3>
+                    <p>Schemes Available</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <h3>Document Processing</h3>
+                <p>Fast and accurate verification of your documents</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <h3>Scheme Matching</h3>
+                <p>Find the perfect government schemes for you</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <h3>Application Assistance</h3>
+                <p>Guided support through the application process</p>
+                <a href="#" class="learn-more">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form" data-aos="fade-up">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            <div class="tab-content">
+                <form id="loginForm" class="auth-form active">
+                    <h2>Login</h2>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </form>
+                <form id="registerForm" class="auth-form">
+                    <h2>Register</h2>
+                    <div class="form-group">
+                        <label for="reg-name">Full Name</label>
+                        <input type="text" id="reg-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirm Password</label>
+                        <input type="password" id="reg-confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GovTech AI</h3>
+                <p>Making government services accessible through AI</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <br>
+                <ul>
+                    <li><a href="#features" class="hi">Features</a></li>
+                    <br>
+                    <li><a href="#about"class="hi">About</a></li>
+                    <br>
+                    <li><a href="#services"class="hi">Services</a></li>
+                    <br>
+                    <li><a href="#contact"class="hi">Contact</a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: kishorepanuganti278@gmail.com</p>
+                <p>Phone:8919829116</p>
+            </div>
+        </div>
+        <script src="gov.js" defer></script>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GovTech AI. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
